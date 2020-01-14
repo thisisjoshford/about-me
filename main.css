@@ -4,12 +4,14 @@ body {
 }
 
 h1 {
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
 h2 {
     text-decoration: underline;
     text-align: center !important;
+    color: black;
 }
 
 .square {
@@ -61,4 +63,30 @@ h2 {
         float: left;
         margin: 20px;
         text-align: left;
+}
+
+.quizButton {
+    font-size: 50px;
+    float: left;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid black 2px;
+    box-shadow: 10px 10px 5px black;
+    padding: 10px;
+    box-shadow: 10px 10px 5px black;
+    margin-left: 80px;
+}
+
+.quizButton:hover {
+    background-color:lightgoldenrodyellow
+
+}
+
+.hidden {
+    display: none;
+}
+
+.results {
+    text-align: left;
+    float: left;
 }

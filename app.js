@@ -1,9 +1,10 @@
 //links isYes.js file
 import isYes from './isYes.js';
 //sets value quizButton from the element from index.html
-const quizButton = document.getElementById('quizbutton');
+const quizButton = document.getElementById('quizButton');
 //sets value total from the element from index.html
 const total = document.getElementById('total');
+const results = document.getElementById('results');
 
 //runs event listener function when quizButton is clicked
 quizButton.addEventListener('click', () => {
@@ -30,4 +31,5 @@ quizButton.addEventListener('click', () => {
     if (!isYes(ans3)) count += 1;
     //prints out the total number right with after their name
     total.textContent = `${name}, You got ${count} correct!`;
+    results.classList.remove('hidden');
 });
