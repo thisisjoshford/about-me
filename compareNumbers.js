@@ -1,4 +1,3 @@
-let correctNumber = 9
 export default function compareNumbers(userGuess, correctNumber){
     if (userGuess === correctNumber) {
         return 0;
