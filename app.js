@@ -11,6 +11,10 @@ const guessDisp =document.getElementById('guessDisp');
 let tries = 4;
 //creates random decimal number then rounds down and multiplies 
 let correctNumber = Math.floor(Math.random() * 10);
+//creates a function that will remove the hidden class from guessDisp
+function remHidden(guessDisp){
+    guessDisp.classList.remove('hidden');
+}
 //tells the submit button to listen for a click and them perform a function
 submitButton.addEventListener('click', () => {
     //removes 1 from tries each time user clicks
@@ -21,17 +25,17 @@ submitButton.addEventListener('click', () => {
     triesDisplay.textContent = tries;
     //runs compare function to see if guess is too high (1 value) and updates display to DOM
     if (compareAns === 1) {
-        guessDisp.classList.remove('hidden');
+        remHidden(guessDisp);
         hiLoDisplay.textContent = 'Your Guess is too high';
     }
     //runs compare function to see if guess is too low (-1 value) and updates display to DOM
     if (compareAns === -1) {
-        guessDisp.classList.remove('hidden');
+        remHidden(guessDisp);
         hiLoDisplay.textContent = 'Your Guess is too low';
     }
     //runs compare function to see if guess correct (0) and updates display to DOM
     if (compareAns === 0) {
-        guessDisp.classList.remove('hidden');
+        remHidden(guessDisp);
         hiLoDisplay.textContent = 'Correct!';
         winLoss.textContent = 'Yay! You WIN!!!';
         submitButton.disabled = true;
