@@ -6,6 +6,7 @@ const submitButton = document.getElementById('submit-button');
 const triesDisplay = document.getElementById('remTries');
 const hiLoDisplay = document.getElementById('hiLoDisplay');
 const winLoss = document.getElementById('winLoss');
+const guessDisp =document.getElementById('guessDisp');
 //sets tries to 4 and allows variable to change
 let tries = 4;
 //creates random decimal number then rounds down and multiplies 
@@ -20,14 +21,17 @@ submitButton.addEventListener('click', () => {
     triesDisplay.textContent = tries;
     //runs compare function to see if guess is too high (1 value) and updates display to DOM
     if (compareAns === 1) {
+        guessDisp.classList.remove('hidden');
         hiLoDisplay.textContent = 'Your Guess is too high';
     }
     //runs compare function to see if guess is too low (-1 value) and updates display to DOM
     if (compareAns === -1) {
+        guessDisp.classList.remove('hidden');
         hiLoDisplay.textContent = 'Your Guess is too low';
     }
     //runs compare function to see if guess correct (0) and updates display to DOM
     if (compareAns === 0) {
+        guessDisp.classList.remove('hidden');
         hiLoDisplay.textContent = 'Correct!';
         winLoss.textContent = 'Yay! You WIN!!!';
         submitButton.disabled = true;
