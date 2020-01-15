@@ -13,28 +13,24 @@ let correctNumber = Math.floor(Math.random() * 10);
 submitButton.addEventListener('click', () => {
     //removes 1 from tries each time user clicks
     tries--;
-    //sets 
-    const val = Number(userGuess.value);
-    //prints the user guess and compare number (for testing purposes)
-    console.log(correctNumber, val);
-    //prints the result of the compareNumbers function (for testing purposes)
-    console.log(compareNumbers(val, correctNumber));
+    //sets compareAns to the value of the compare numbers function to make code less WET
+    const compareAns = (compareNumbers(Number(userGuess.value), correctNumber));
     //sets the display data for the DOM to update to number of tries
     triesDisplay.textContent = tries;
     //runs compare function to see if guess is too high (1 value) and updates display to DOM
-    if (compareNumbers(val, correctNumber) === 1) {
+    if (compareAns === 1) {
         hiLoDisplay.textContent = 'Your Guess is too high';
     }
     //runs compare function to see if guess is too low (-1 value) and updates display to DOM
-    if (compareNumbers(val, correctNumber) === -1) {
+    if (compareAns === -1) {
         hiLoDisplay.textContent = 'Your Guess is too low';
     }
     //runs compare function to see if guess correct (0) and updates display to DOM
-    if (compareNumbers(val, correctNumber) === 0) {
+    if (compareAns === 0) {
         hiLoDisplay.textContent = 'Your Guess is correct!';
     }
     //checks to see if the number of tries is 0 and we did not guess the correct number (!) then updates the display to DOM
-    if (tries === 0 && compareNumbers(val, correctNumber) !== 0) {
+    if (tries === 0 && compareAns !== 0) {
         hiLoDisplay.textContent = 'Sorry... you lost!';
     }
 });
