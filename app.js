@@ -5,6 +5,7 @@ const userGuess = document.getElementById('number-guess');
 const submitButton = document.getElementById('submit-button');
 const triesDisplay = document.getElementById('remTries');
 const hiLoDisplay = document.getElementById('hiLoDisplay');
+const winLoss = document.getElementById('winLoss');
 //sets tries to 4 and allows variable to change
 let tries = 4;
 //creates random decimal number then rounds down and multiplies 
@@ -27,12 +28,13 @@ submitButton.addEventListener('click', () => {
     }
     //runs compare function to see if guess correct (0) and updates display to DOM
     if (compareAns === 0) {
-        hiLoDisplay.textContent = 'Your Guess is correct!';
+        hiLoDisplay.textContent = 'Correct!';
+        winLoss.textContent = 'Yay! You WIN!!!';
         submitButton.disabled = true;
     }
     //checks to see if the number of tries is 0 and we did not guess the correct number (!) then updates the display to DOM
     if (tries === 0 && compareAns !== 0) {
-        hiLoDisplay.textContent = 'Sorry... you lost!';
+        winLoss.textContent = 'Sorry... you lost!';
         submitButton.disabled = true;
     }
 });
