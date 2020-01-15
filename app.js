@@ -4,6 +4,7 @@ import isYes from './isYes.js';
 const quizButton = document.getElementById('quizButton');
 //sets value total from the element from index.html
 const total = document.getElementById('total');
+//sets results value from the html file
 const results = document.getElementById('results');
 
 //runs event listener function when quizButton is clicked
@@ -31,5 +32,6 @@ quizButton.addEventListener('click', () => {
     if (!isYes(ans3)) count += 1;
     //prints out the total number right with after their name
     total.textContent = `${name}, You got ${count} correct!`;
+    //removes the hidden feature from results when clicked
     results.classList.remove('hidden');
 });
