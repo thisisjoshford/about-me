@@ -1,0 +1,92 @@
+body {
+    background-image: linear-gradient( black, darkgrey);
+    text-align: center;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+h2 {
+    text-decoration: underline;
+    text-align: center !important;
+    color: black;
+}
+
+.square {
+    box-sizing: border-box;
+    height:200px;
+    width:175px;
+    border-radius: 10px;
+    border: solid black 2px;
+    background-color: #7ca6ad;
+    margin: 0 auto;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    box-shadow: 10px 10px 5px black;
+    float: left;
+    margin: 20px;
+    text-align: left;
+}
+
+.square2 {
+    box-sizing: border-box;
+    height:400px;
+    width:300px;
+    border-radius: 10px;
+    border: solid black 2px;
+    background-color: #168576;
+    margin: 0 auto;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    box-shadow: 10px 10px 5px black;
+    float: left;
+    margin: 20px;
+    text-align: left;
+}
+
+.square3 {
+        box-sizing: border-box;
+        height:200px;
+        width:200px;
+        border-radius: 10px;
+        border: solid black 2px;
+        background-color: #a0ae88;
+        margin: 0 auto;
+        color: black;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 10px;
+        box-shadow: 10px 10px 5px black;
+        float: left;
+        margin: 20px;
+        text-align: left;
+}
+
+.quizButton {
+    font-size: 50px;
+    float: left;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid black 2px;
+    box-shadow: 10px 10px 5px black;
+    padding: 10px;
+    box-shadow: 10px 10px 5px black;
+    margin-left: 80px;
+}
+
+.quizButton:hover {
+    background-color:lightgoldenrodyellow
+
+}
+
+.hidden {
+    display: none;
+}
+
+.results {
+    text-align: left;
+    float: left;
+}
